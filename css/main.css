@@ -1,0 +1,68 @@
+a {
+  font-style: italic;
+  text-decoration: none;
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  color: #222222;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Palatino Linotype", Georgia, serif;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+p {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+a {
+  color: #f27731;
+}
+
+.warning-button {
+  background-color: orange;
+  color: white;
+  padding: 8px 12px;
+}
+
+#header {
+  height: 60px;
+  background-color: #170a48;
+  border-radius: 8px;
+  border: 1px solid yellow;
+}
+
+#header #main-menu li {
+  display: inline;
+}
+
+#header #main-menu a {
+  color: white;
+}
+
+* html body {
+  font-size: 125%;
+}
+
+#main {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer {
+  height: 90px;
+  background-color: #ccf962;
+}
+ 
+
+ /*# sourceMappingURL= main.css.map */
