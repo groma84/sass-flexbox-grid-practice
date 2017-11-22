@@ -1,0 +1,43 @@
+// Theme
+$theme: Dark;
+
+$brand: blue-beans;
+
+$speakers: bob-banker, anna-anfang, sandra-schmitt;
+
+// Color defaults
+$body-background-color: white;
+$text-color: #222222;
+$theme-color: #170a48;
+$secondary-color: #f27731;
+$ternary-color: #ccf962;
+$link-color: $secondary-color;
+$menu-item-color: white;
+
+@if $theme == Dark {
+  $body-background-color: black;
+  $text-color: lightgreen;
+  $theme-color: black;
+  $secondary-color: pink;
+  $ternary-color: yellow;
+  $link-color: $secondary-color;
+  $menu-item-color: white;
+} @else if $theme == Light {
+  $body-background-color: white;
+  $text-color: #222222;
+  $theme-color: #170a48;
+  $secondary-color: #f27731;
+  $ternary-color: #ccf962;
+  $link-color: $secondary-color;
+  $menu-item-color: white;
+}
+
+// Fonts
+$text-font: "Alegreya Sans", Verdana, Arial, sans-serif;
+$headline-font: "Titillium Web", "Palatino Linotype", Georgia, serif;
+
+// Sizes
+$content-width: 960px;
+$header-height: 60px;
+$footer-height: 90px;
+$col: col-width(8);

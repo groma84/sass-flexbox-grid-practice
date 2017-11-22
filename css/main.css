@@ -1,18 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 a {
   font-style: italic;
   text-decoration: none;
 }
 
+.error, .critical-error {
+  color: red;
+}
+
+.critical-error {
+  border-bottom: 1px solid red;
+  font-weight: bold;
+}
+
 body {
-  font-family: Verdana, Arial, sans-serif;
-  color: #222222;
+  background-color: black;
+  font-family: "Alegreya Sans", Verdana, Arial, sans-serif;
+  font-size: 1.125em;
+  color: lightgreen;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Palatino Linotype", Georgia, serif;
+  font-family: "Titillium Web", "Palatino Linotype", Georgia, serif;
 }
 
 h3 {
@@ -21,22 +34,37 @@ h3 {
 }
 
 p {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Alegreya Sans", Verdana, Arial, sans-serif;
 }
 
 a {
-  color: #f27731;
+  color: pink;
+  color: blue;
 }
 
-.warning-button {
+a:hover {
+  color: #ff748c;
+}
+
+.warning-button, .call-to-action-button {
   background-color: orange;
   color: white;
+  cursor: pointer;
   padding: 8px 12px;
+}
+
+.warning-button:hover, .call-to-action-button:hover {
+  background-color: #ffb733;
+}
+
+.call-to-action-button {
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 #header {
   height: 60px;
-  background-color: #170a48;
+  background-color: black;
   border-radius: 8px;
   border: 1px solid yellow;
 }
@@ -47,6 +75,14 @@ a {
 
 #header #main-menu a {
   color: white;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(254, 254, 254, 0);
+  transition: border-bottom 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#header #main-menu a:hover {
+  border-bottom: 1px solid #fefefe;
 }
 
 * html body {
@@ -59,9 +95,36 @@ a {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 960px) {
+  #main {
+    width: auto;
+    max-width: 960px;
+  }
+}
+
+#main #content {
+  float: left;
+  width: 69.75%;
+}
+
+#main #sidebar {
+  float: right;
+  width: 23.25%;
+}
+
+#main #sidebar li {
+  list-style-type: none;
+  padding: 1em 1.25em;
+  border-bottom: 1px dashed #999;
+}
+
+#main #sidebar li:hover {
+  background-color: #efefef;
+}
+
 #footer {
   height: 90px;
-  background-color: #ccf962;
+  background-color: yellow;
 }
  
 

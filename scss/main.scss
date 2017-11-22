@@ -1,10 +1,26 @@
-@import "variables";
-@import "mixins";
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/mixins";
+
+@include google-font("Alegreya+Sans");
+@include google-font("Titillium+Web");
 
 @include fancy-links;
 
+.error {
+  color: red;
+}
+
+.critical-error {
+  @extend .error;
+  border-bottom: 1px solid red;
+  font-weight: bold;
+}
+
 body {
+  background-color: $body-background-color;
   font-family: $text-font;
+  font-size: em(18px);
   color: $text-color;
 }
 
@@ -25,11 +41,25 @@ p {
 
 a {
   color: $link-color;
+
+  @include blue-beans {
+    color: blue;
+  }
+
+  &:hover {
+    color: darken($link-color, 15%);
+  }
 }
 
 .warning-button {
   @include warning;
   padding: 8px 12px;
+}
+
+.call-to-action-button {
+  @extend .warning-button;
+  @include rounded;
+  font-weight: bold;
 }
 
 #header {
@@ -44,6 +74,14 @@ a {
 
     a {
       color: $menu-item-color;
+      padding: 6px 8px;
+      border-bottom: 1px solid transparentize($color: #fefefe, $amount: 1);
+      transition: border-bottom 0.5s;
+      transition-timing-function: ease-in-out;
+
+      &:hover {
+        border-bottom: 1px solid opacify($color: #fefefe, $amount: 0.5);
+      }
     }
   }
 
@@ -59,13 +97,31 @@ a {
 
 #main {
   width: $content-width;
+  @include large-screens {
+    width: auto;
+    max-width: $content-width;
+  }
   margin-left: auto;
   margin-right: auto;
 
   #content {
+    float: left;
+    width: 6*$col;
   }
 
   #sidebar {
+    float: right;
+    width: 2*$col;
+
+    li {
+      list-style-type: none;
+      padding: em(16px) em(20px);
+      border-bottom: 1px dashed #999;
+
+      &:hover {
+        background-color: #efefef;
+      }
+    }
   }
 }
 
